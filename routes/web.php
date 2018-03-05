@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.cover');
-});
+//general routes
+Route::get('/', 'GeneralController@home')->name('home');
+Route::get('/services', 'GeneralController@services')->name('services');
+Route::get('/products', 'GeneralController@products')->name('products');
+Route::get('/contact', 'GeneralController@contact')->name('contact');
